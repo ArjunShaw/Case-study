@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { lazy, Suspense } from "react";
+
+// Lazy loading (code splitting)
+const Admin = lazy(() => import("./pages/Admin"));
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-     
-    </>
-  )
+    <div>
+      <h1>ShopEase App</h1>
+
+      <Suspense fallback={<p>Loading Admin Page...</p>}>
+        <Admin />
+      </Suspense>
+    </div>
+  );
 }
 
-export default App
+export default App;
