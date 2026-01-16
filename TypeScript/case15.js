@@ -1,0 +1,11 @@
+var a = { name: "Alice", subject: "Math" };
+var b = { name: "Bob", department: "Science" };
+console.log(a);
+console.log(b);
+var date = new Date();
+var obj = { title: "Homework 1", dueDate: date.toDateString(), points: 100 };
+console.log(obj);
+var obj3 = { quizzes: 5, videos: 10, assignments: 3 };
+var obj2 = { quizzes: "5", videos: "10", assignments: "3" };
+console.log(obj2);
+console.log(obj3);
